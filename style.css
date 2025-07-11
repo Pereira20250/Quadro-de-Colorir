@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+   text-align: center;
+}
+
+header {
+    background: #2d3e50;
+    color: #fff;
+    padding: 24px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 32px;
+}
+
+#drawing-area {
+    border: 2px dashed #2d3e50;
+    border-radius: 8px;
+    background: #fafbfc;
+    width: 100%;
+    min-height: 400px;
+    margin-bottom: 24px;
+    position: relative;
+    cursor: crosshair;
+}
+
+button, .btn {
+    background: #2d3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-right: 8px;
+}
+
+button:hover, .btn:hover {
+    background: #1a2533;
+}
+
+.palette {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.palette .color {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+
+.palette .color.selected,
+.palette .color:focus {
+    border: 2px solid #2d3e50;
+}
+/* Responsividade para qualquer dispositivo */
+html {
+    font-size: 100%;
+}
+
+@media (max-width: 900px) {
+    .container {
+        max-width: 98vw;
+        padding: 16px;
+    }
+    #drawing-area {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    .container {
+        padding: 8px;
+    }
+    #drawing-area {
+        min-height: 160px;
+    }
+    .palette {
+        gap: 6px;
+    }
+    button, .btn {
+        padding: 8px 12px;
+        font-size: 0.95rem;
+    }
+}
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+    }
+    #drawing-area {
+        min-height: 220px;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quadro de Desenho</title>
+</head>
+<body>
+
+    <h1>Quadro de Desenho</h1>
+
+    <div>
+        <p>Este é um quadro simples para desenho, ele foi projetado para que você possa ter um momento de criatividade</p>
+    </div>
+
+    <div class="drawing-area">
+        <canvas id="drawing-area" width="800" height="500"></canvas>
+        <div class="controls">
+            <button id="clear-button">Limpar</button>
+            <button id="salvar-button">Salvar</button>
+        </div>
+        <div class="color-picker">
+            <label for="color">Cor</label>
+            <input type="color" id="color" value="#000000">
+            <label for="size">Tamanho do Pincel</label>
+            <input type="range" id="size" min="1" max="100" value="5">
+        </div>
+    </div>
+
+    <p><strong>Email:</strong>passandotempocomdeus@gmail.com</p>
+    
+    <script src="script.js"></script>
+</body>
+</html>
